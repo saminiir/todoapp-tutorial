@@ -2,7 +2,7 @@
 'use strict';
 
 require(['require-config'], function() {
-  require(['jquery'], function($) {
-
-  });
+    require(['scripts/app/todoApp'], function(TodoApp) {
+        new TodoApp().run();
+    });
 });
