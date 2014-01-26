@@ -5,11 +5,21 @@ module.exports = function(grunt) {
         jasmine : {
             src : 'scripts/**/*.js',
             options : {
-                specs : 'test/**/*.js'
+                specs : 'test/**/*.js',
+                keepRunner: true,
+                template: require('grunt-template-jasmine-requirejs'),
+                templateOptions: {
+                    requireConfigFile: 'scripts/require-config.js',
+                    requireConfig: {
+                        paths: {
+                            "require-config": 'scripts/require-config'
+                        }
+                    }
+                }
             }
         },
         watch : {
-            files : ['**/*.js', '!bower_components/**', '!node_modules/**'],
+            files : ['scripts/**/*.js', '!bower_components/**', '!node_modules/**'],
             tasks: ['jasmine']
         }
     });
