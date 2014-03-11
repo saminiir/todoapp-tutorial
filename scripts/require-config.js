@@ -1,7 +1,7 @@
 require.config({
   baseUrl: '',
   paths: {
-    jquery: 'bower_components/jquery/jquery',
+    jquery: 'bower_components/jquery/dist/jquery',
     handlebars: 'bower_components/handlebars/handlebars'
   },
   shim: {
