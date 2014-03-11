@@ -33,6 +33,10 @@ h1 {
     min-height: 2em;
 }
 
+#todo-list li {
+    min-height: 25px;
+}
+
 #todo-list .destroy {
     float: right;
 }
