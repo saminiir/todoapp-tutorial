@@ -8,6 +8,10 @@ module.exports = function(grunt) {
                 specs : 'test/**/*.js',
                 keepRunner: true,
                 template: require('grunt-template-jasmine-requirejs'),
+                vendor: [
+                    'bower_components/jquery/dist/jquery.js',
+                    'bower_components/jasmine-jquery/lib/jasmine-jquery'
+                ],
                 templateOptions: {
                     requireConfigFile: 'scripts/require-config.js',
                     requireConfig: {
