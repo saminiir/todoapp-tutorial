@@ -1,11 +1,13 @@
-require(['scripts/app/todoApp'], function(TodoApp){
-    describe("TodoApp", function() {
-        it("should be an object", function() {
-            expect(typeof TodoApp).toBe("object");
-        });
+define(['scripts/app/todoApp'], function(TodoApp){
+    jasmine.getFixtures().fixturesPath = '.';
 
-        it("should have start function", function() {
-            expect(typeof TodoApp.start).toBe("function");
+    describe("TodoApp", function() {
+        beforeEach(function() {
+            loadFixtures("index.html")
+        })
+
+        it("should be able to add Todo item", function() {
+            var todoInput = $("#new-todo")
         });
     });
 });
