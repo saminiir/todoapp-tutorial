@@ -2,6 +2,14 @@ module.exports = function(grunt) {
     'use strict';
     // Project configuration.
     grunt.initConfig({
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: ''
+                }
+            }
+        },
         jasmine : {
             src : 'scripts/**/*.js',
             options : {
@@ -10,7 +18,7 @@ module.exports = function(grunt) {
                 template: require('grunt-template-jasmine-requirejs'),
                 vendor: [
                     'bower_components/jquery/dist/jquery.js',
-                    'bower_components/jasmine-jquery/lib/jasmine-jquery'
+                    'bower_components/jasmine-jquery/lib/jasmine-jquery.js'
                 ],
                 templateOptions: {
                     requireConfigFile: 'scripts/require-config.js',
@@ -27,6 +35,12 @@ module.exports = function(grunt) {
             tasks: ['jasmine']
         }
     });
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-watch');
+
+    grunt.registerTask('serve', [
+        'connect:server',
+        'watch'
+    ]);
 };
