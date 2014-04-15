@@ -13,7 +13,7 @@ Install dependencies with
 bower install
 npm install
 
-Running (tests)
+Running 
 =======
 
-Run 'grunt watch'.
+Run 'grunt serve'
