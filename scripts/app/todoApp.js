@@ -3,23 +3,22 @@ define([
     'handlebars'
     ], 
     function ($, Handlebars) {
-        
-        function TodoApp() {
-            this.todos = {};
+
+        function cacheElements() {
+            console.log("Caching elements!")
         }
 
-        TodoApp.prototype.cacheElements = function() {
-
+        function bindEvents() {
+            console.log("Binding events!")
         }
 
-        TodoApp.prototype.bindEvents = function() {
-
+        function start() {
+            cacheElements()
+            bindEvents()
         }
 
-        TodoApp.prototype.render = function() {
-
+        return {
+            start: start
         }
-
-        return TodoApp; 
     }
 );

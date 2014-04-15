@@ -1,15 +1,11 @@
 require(['scripts/app/todoApp'], function(TodoApp){
     describe("TodoApp", function() {
         it("should be an object", function() {
-            expect(typeof TodoApp).toBe("function");
+            expect(typeof TodoApp).toBe("object");
         });
 
-        it("should have render function", function() {
-            expect(typeof TodoApp.prototype.render).toBe("function");
-        });
-
-        it("should have run function", function() {
-            expect(typeof TodoApp.prototype.run).toBe("function");
+        it("should have start function", function() {
+            expect(typeof TodoApp.start).toBe("function");
         });
     });
 });

@@ -3,6 +3,6 @@
 
 require(['require-config'], function() {
     require(['scripts/app/todoApp'], function(TodoApp) {
-        new TodoApp().run();
+        TodoApp.start();
     });
 });
